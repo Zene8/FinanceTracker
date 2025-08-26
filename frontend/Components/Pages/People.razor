@@ -1,0 +1,34 @@
+@page "/people"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h1>People</h1>
+
+@if (people == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var person in people)
+        {
+            <li>@person.name</li>
+        }
+    </ul>
+}
+
+@code {
+    private Person[] people;
+
+    protected override async Task OnInitializedAsync()
+    {
+        people = await Http.GetFromJsonAsync<Person[]>("/api/people");
+    }
+
+    public class Person
+    {
+        public long id { get; set; }
+        public string name { get; set; }
+    }
+}
