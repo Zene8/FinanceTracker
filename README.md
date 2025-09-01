@@ -1,92 +1,87 @@
-# FinanceTracker
+# Finance Tracker
 
-A web application to track personal finances.
+A full-stack web application for personal finance management, built with a Spring Boot backend and a Blazor frontend.
 
-## Project Description
+## Table of Contents
 
-FinanceTracker is a full-stack web application designed to help users manage their finances. It features a Spring Boot backend that provides a REST API for managing financial data, and a Blazor WebAssembly frontend for a rich user interface. The application allows users to categorize their expenses and manage personal financial records.
+- [About the Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Tech Stack
+## About the Project
 
-*   **Backend:** Java 17, Spring Boot 3.5.5, Spring Data JPA, H2 Database, Maven
-*   **Frontend:** .NET 8, Blazor
+This project is a comprehensive suite for managing personal finances. It allows users to track their income and expenses, create budgets, and gain insights into their spending habits. The application is designed to be user-friendly and intuitive, with a clean and modern interface.
 
-## Development Environment Setup
+### Built With
+
+*   **Backend:**
+    *   [Spring Boot](https://spring.io/projects/spring-boot)
+    *   [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+    *   [Maven](https://maven.apache.org/)
+*   **Frontend:**
+    *   [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
+    *   [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0)
+*   **Database:**
+    *   [H2 Database](https://www.h2database.com/html/main.html) (for development)
+    *   [PostgreSQL](https://www.postgresql.org/) (for production)
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-*   Java JDK 17 or later
-*   Apache Maven
+*   Java 17 or higher
 *   .NET 8 SDK
+*   Node.js (for frontend dependencies)
 
-### Backend
+### Installation
 
-1.  **Navigate to the backend directory:**
-    ```bash
-    cd backend
+1.  **Clone the repo**
+    ```sh
+    git clone https://github.com/your_username/FinanceTracker.git
     ```
-2.  **Run the Spring Boot application:**
-    ```bash
+2.  **Backend Setup**
+    ```sh
+    cd backend
     mvn spring-boot:run
     ```
-    The backend server will start on `http://localhost:8080`.
-
-### Frontend
-
-1.  **Navigate to the frontend directory:**
-    ```bash
+3.  **Frontend Setup**
+    ```sh
     cd frontend
-    ```
-2.  **Run the Blazor application:**
-    ```bash
-    dotnet run
-    ```
-    The frontend application will be accessible at the address provided in the console (usually `http://localhost:5000` or `https://localhost:5001`).
-
-## Testing
-
-### Backend
-
-To run the backend tests, navigate to the `backend` directory and run:
-
-```bash
-mvn test
-```
-
-### Frontend
-
-There are currently no automated tests for the frontend. Future development will include adding unit and integration tests for the Blazor components.
-
-## Deployment
-
-### Backend
-
-1.  **Package the application:**
-    Navigate to the `backend` directory and run:
-    ```bash
-    mvn package
-    ```
-    This will create a JAR file in the `target` directory.
-2.  **Run the application:**
-    ```bash
-    java -jar target/financetracker-0.0.1-SNAPSHOT.jar
+    dotnet watch run
     ```
 
-### Frontend
+## Usage
 
-1.  **Publish the application:**
-    Navigate to the `frontend` directory and run:
-    ```bash
-    dotnet publish -c Release
-    ```
-2.  **Deploy the contents:**
-    Deploy the contents of the `bin/Release/net8.0/publish/wwwroot` directory to a static web hosting service.
+Once the application is running, you can access it at `http://localhost:5000`. You can start by creating categories for your expenses, adding people, and then tracking your transactions.
 
-## Future Development
+## Roadmap
 
-*   **Transaction Management:** Add functionality to create, edit, and delete financial transactions.
-*   **User Authentication:** Implement user authentication and authorization to secure user data.
-*   **Reporting and Analytics:** Develop features for generating financial reports and visualizing data with charts.
-*   **Database Integration:** Replace the in-memory H2 database with a persistent database like PostgreSQL or MySQL.
-*   **Enhanced UI/UX:** Improve the user interface and user experience with a more modern design and responsive layout.
-*   **Comprehensive Testing:** Increase test coverage for both the backend and frontend.
+See the [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) file for a detailed look at the future of the project.
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Your Name - your_email@example.com
+
+Project Link: [https://github.com/your_username/FinanceTracker](https://github.com/your_username/FinanceTracker)
